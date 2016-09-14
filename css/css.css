@@ -2,10 +2,14 @@
 /* CSS Document */
 body { margin: 0px; padding: 0px; font-size: 14px; font-family: "微软雅黑"; }
 /*万能清除浮动开始*/
-.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
-.clearfix { display: inline-table; } /* Hides from IE-mac */
-* html .clearfix { height: 1%; }
-.clearfix { display: block; }
+.clearfix:before,.clearfix:after{ 
+    content:""; 
+    display:table; 
+} 
+.clearfix:after{clear:both;} 
+.clearfix{ 
+    *zoom:1;/*IE/7/6*/
+}
 
 .fl { float: left; }
 .fr { float: right; }
